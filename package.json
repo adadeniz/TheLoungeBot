@@ -1,0 +1,9 @@
+{
+  "name": "regulatorbot",
+  "version": "1.0.0",
+  "dependencies": {
+    "discord.js": "latest",
+    "ffmpeg": "0.0.4",
+    "request": "^2.88.0"
+  }
+}
