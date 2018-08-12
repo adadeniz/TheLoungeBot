@@ -2,7 +2,7 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const token = 'NDcyMjIwODY1OTk2NTIxNDcz.DjwQwA.4sHnYtWt4lwIqwbeHiImJ2uLNXg';
+const token = 'snip';
 const handle = require("./handler");
 
 client.on('ready', () => {
@@ -14,6 +14,7 @@ client.on('message', message => {
     handle(message );
 });
 
-client.channels.get('478293956942364673').send('!news');
+let messageChannel = client.guild.channels.find('name', 'news');
+messageChannel.send('!news');
 
 client.login(token);
