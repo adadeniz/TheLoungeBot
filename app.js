@@ -6,15 +6,12 @@ const token = require('./token');
 const handle = require("./handler");
 
 client.on('ready', () => {
-    client.user.setActivity('Lounging');
+    client.user.setPresence({game : { name: "Breaking the internet!"}});
     console.log('Bot loaded...');
 });
 
 client.on('message', message => {
     handle(message );
 });
-
-let messageChannel = client.guild.channels.find('name', 'news');
-messageChannel.send('!news');
 
 client.login(token);

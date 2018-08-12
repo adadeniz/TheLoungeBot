@@ -7,11 +7,14 @@ module.exports = function (message){
     let messageParts = message.content.split(" ");
     let command = messageParts[0].toLowerCase();
 
-    if(command.indexOf("news") > -1) {
+    if(command.replace('!', '') === 'news') {
 
-        request.get("https://www.reddit.com/r/technews/hot.json", function (err, response, body) {
+        request.get("https://www.reddit.com/r/technology/hot.json", function (err, response, body) {
 
-            let redditArticle = JSON.parse(body).data.children[0].data;
+            let max = JSON.parse(body).data.dist;
+            let num = Math.floor(Math.random() * max);
+
+            let redditArticle = JSON.parse(body).data.children[num].data;
 
             let article = new Discord.RichEmbed()
                 .setTitle(redditArticle.title)
