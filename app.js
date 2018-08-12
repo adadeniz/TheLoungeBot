@@ -2,7 +2,7 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const token = 'snip';
+const token = require('./token');
 const handle = require("./handler");
 
 client.on('ready', () => {
