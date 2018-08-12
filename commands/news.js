@@ -23,7 +23,7 @@ module.exports = function (message){
                 .setURL('https://reddit.com'+redditArticle.permalink)
                 .setColor("#00FFFF");
 
-            return message.channel.send({embed: article})
+            return message.channel.send({embed: article});
 
         })
 

@@ -38,7 +38,7 @@ module.exports = function (message){
         setInterval(initnews, 28800000)
 
         } else {
-           message.reply(`This command requires elevation: **${settings.adminrole}**`)
+           message.reply(`This command requires elevation: **${settings.adminrole}**`);
 
         }
 
